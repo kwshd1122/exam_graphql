@@ -30,9 +30,6 @@ gem "jbuilder"
 # Use Graphql Ruby
 gem 'graphql', '~> 2.0', '>= 2.0.22'
 
-# Tool to Avoid N+1 DB or HTTP qureies [https://github.com/exAspArk/batch-loader]
-gem 'batch-loader', '~> 2.0', '>= 2.0.1'
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
