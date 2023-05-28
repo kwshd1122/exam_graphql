@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.3
+    volumes:
+      - mariadb_data:/var/lib/mysql:delegated
+    environment:
+      MYSQL_ROOT_PASSWORD: hogehoge
+    ports:
+      - "3401:3306"
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp:delegated
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - RAILS_ENV=development
+      - MYSQL_DB_HOST=db
+
+volumes:
+  mariadb_data:
