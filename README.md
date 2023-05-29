@@ -10,6 +10,8 @@ $ docker compose up
  $ docker compose exec web rails db:create
  $ docker compose exec web rails db:migrate
  ```
+ ![image](https://github.com/kwshd1122/exam_graphql/assets/13035016/99a74145-687b-49cf-be7f-86962e67395b)
+
  
  # Graphiql
  ### URL
@@ -60,7 +62,7 @@ query {
   "data": {
     "findUser": {
       "age": 10,
-      "name": "ha",
+      "name": "test_name",
       "tweets": [
         {
           "article": "Test Tweet"
